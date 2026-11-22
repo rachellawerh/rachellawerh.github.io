@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Rachel Lawerh | Selected Evidence Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+/* VOICE everyday-professional: a public health practitioner's working record, calm and exact
+   IDEA a field route map: each posting is a station on one line from Accra to Ottawa
+   PICTURE the route band across the first screen, stations linked to the projects below
+   COLOUR white ground, ink, deep cobalt as the line, signal coral to mark what matters
+   TYPE Newsreader for titles + Public Sans for text
+   LAYOUT laptop: name and profile across the top, route full width beneath; phone: route turns vertical */
+:root{color-scheme:light;--bg:#fbfaf7;--ink:#162e32;--muted:#536866;--line:#166b67;--coral:#a8c9b7;--panel:#edf4ef;--rule:#d6e3dc;--band:#163e3d;--bandink:#ffffff}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Public Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:var(--line)}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(40px,6vw,64px)}
+h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:14px}
+h3{font-size:24px}
+.band{padding-block:clamp(32px,4.5vw,68px);padding-inline:max(5vw,16px)}
+.in{max-width:1180px;margin:0 auto}
+nav.top{position:sticky;top:0;z-index:4;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav.top .in{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;padding:12px max(5vw,16px)}
+nav.top b{font-family:Newsreader,serif;font-size:20px}
+nav.top .links{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav.top .links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:8px 0}
+nav.top .links a:hover{color:var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 56px;align-items:end}
+.role{font-weight:700;color:var(--line);margin:14px 0 0;font-size:18px}
+.lead{font-size:18px;color:var(--muted);margin:0;max-width:62ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:4px;background:var(--line);color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.route{background:var(--band);color:var(--bandink);margin-top:clamp(28px,4vw,48px)}
+.route .in{padding:30px 0 26px}
+.route p{margin:0 0 18px;font-size:15px;opacity:.85}
+.stops{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));position:relative}
+.stops:before{content:"";position:absolute;left:0;right:0;top:15px;height:8px;background:#d6e9de;border-radius:4px;opacity:.95}
+.stops li{position:relative;padding:44px 8px 0 0}
+.stops a{color:inherit;text-decoration:none;display:block}
+.stops .dot{position:absolute;top:5px;left:0;width:28px;height:28px;border-radius:50%;background:var(--band);border:6px solid #d6e9de}
+.stops li.key .dot{background:#c6a876}
+.stops .yr{font-weight:700;font-size:14px;white-space:nowrap}
+.stops .nm{font-family:Newsreader,serif;font-size:17px;line-height:1.15;display:block;margin:2px 0}
+.stops .pl{font-size:13px;opacity:.8}
+.stops a:hover .nm,.stops a:focus .nm{text-decoration:underline}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 26px}
+.filters button{min-height:44px;padding:0 16px;border-radius:22px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);font:600 15px "Public Sans",sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.proj{border-top:4px solid var(--line);background:#ffffff;border:1px solid var(--rule);padding:24px 26px 22px;display:flex;flex-direction:column}
+.proj[hidden]{display:none}
+.where{font-size:14px;font-weight:700;color:var(--muted);margin:0 0 8px}
+.proj h3{margin-bottom:10px}
+.proj .sum{margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{font-size:13px;font-weight:600;background:var(--bg);border:1px solid var(--rule);padding:3px 9px;border-radius:3px}
+details{margin-top:auto;border-top:1px solid var(--rule);padding-top:12px}
+summary{cursor:pointer;font-weight:700;color:var(--line);min-height:32px;list-style-position:outside}
+details h4{font-size:15px;margin:16px 0 4px;color:var(--coral)}
+details p,details ul{margin:0}
+details ul{padding-left:20px}
+.also{margin-top:28px;padding:20px 24px;border-left:4px solid var(--coral);background:var(--panel)}
+.also p{margin:0}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 56px}
+.quote{font-family:Newsreader,serif;font-size:22px;line-height:1.35;margin:0 0 18px;padding-left:20px;border-left:4px solid var(--line)}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:12px 0;border-bottom:1px solid var(--rule)}
+.list li:last-child{border-bottom:0}
+.list b{display:block}
+.list span{font-size:14.5px;color:var(--muted)}
+h3.sub{font-size:21px;margin:26px 0 6px}
+h3.sub:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--rule);padding:6px 12px;border-radius:3px;font-size:14.5px}
+footer{background:var(--band);color:#fff}
+footer a{color:#fff;font-weight:700}
+footer .two p{margin:0 0 8px}
+.small{font-size:13.5px;opacity:.8}
+@media(max-width:900px){.hero,.two{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){
+.stops{grid-template-columns:minmax(0,1fr)}
+.stops:before{left:10px;right:auto;top:0;bottom:0;width:8px;height:auto}
+.stops li{padding:6px 0 14px 46px}
+.stops .dot{top:6px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Original explanatory graphics, created for this portfolio. */
+.visual-intro{max-width:70ch;margin-bottom:24px}.viz-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.viz{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:25px;box-shadow:0 8px 24px #163e3d0b}.viz h3{margin:0 0 8px;font-size:25px}.viz .eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--line);font-weight:700}.viz p{font-size:14px;color:var(--muted);margin:6px 0 15px}.steps{display:flex;gap:6px;align-items:stretch;margin:17px 0}.step{flex:1;background:var(--panel);border-top:3px solid var(--line);padding:13px 9px;font-size:13px;line-height:1.35;min-height:82px}.step strong{display:block;font-size:14px;color:var(--ink);margin-bottom:6px}.step-arrow{align-self:center;font-size:20px;color:var(--line)}.viz .caption{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px;margin-top:12px}.reaim{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin:18px 0}.reaim div{padding:12px 7px;background:var(--panel);border-bottom:3px solid var(--line);text-align:center;font-size:12px;line-height:1.3}.reaim strong{display:block;font-size:18px;color:var(--line)}.mini-chart{border-left:1px solid #8da9a3;border-bottom:1px solid #8da9a3;position:relative;height:128px;margin:22px 8px 20px 20px;background:repeating-linear-gradient(to top,transparent 0,transparent 30px,#e8eeea 31px)}.mini-chart svg{width:100%;height:100%;overflow:visible}.chart-legend{display:flex;gap:15px;font-size:12px;color:var(--muted)}.chart-legend i{display:inline-block;width:15px;height:4px;vertical-align:middle;margin-right:5px}.research-notes{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap}.research-notes span{font-size:12px;border:1px solid var(--rule);border-radius:30px;padding:5px 9px;color:var(--ink)}
+@media(max-width:900px){.viz-grid{grid-template-columns:1fr}}@media(max-width:520px){.steps{flex-direction:column}.step{min-height:0}.step-arrow{transform:rotate(90deg);align-self:center}.reaim{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.project-visual{background:#f7faf7;border:1px solid var(--rule);border-radius:10px;padding:14px;margin:16px 0}.project-visual .steps{margin:10px 0}.project-visual .step{min-height:60px;padding:10px 8px}.project-visual .step strong{font-size:13px}.project-visual .caption{font-size:11px;color:var(--muted);margin:8px 0 0}.project-visual .reaim{margin:10px 0}.project-visual .reaim div{font-size:11px;padding:9px 4px}.micro-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:750;color:var(--line)}.mini-sub{font-size:12px;line-height:1.5;margin-top:10px;color:var(--ink)}@media(max-width:550px){.project-visual .steps{flex-direction:column}.project-visual .step-arrow{transform:rotate(90deg)}}
+
+.evidence-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.evidence-strip>div{padding:13px 12px;border:1px solid var(--rule);background:var(--bg);border-top:4px solid var(--line);border-radius:7px}.evidence-strip b{display:block;color:var(--ink);font-size:13px}.evidence-strip small{display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:5px}@media(max-width:700px){.evidence-strip{grid-template-columns:1fr}}
+
+.model-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:12px 0}.model-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.model-grid>div{background:#e7f0e9;border-top:3px solid #1a665e;padding:11px 9px;min-width:0}.model-grid b{display:block;color:#124b48;font-size:.78rem;margin-bottom:7px}.model-grid span{display:block;font-size:.77rem;line-height:1.45}.photo-model{display:flex;gap:20px;align-items:center;justify-content:center;margin:16px 0}.camera{font-size:3.5rem}.eco{display:flex;flex-direction:column;align-items:center;gap:5px}.eco span{display:block;text-align:center;border:2px solid #8daea2;border-radius:35px;padding:8px 22px;font-size:.82rem;width:100%;max-width:390px}.eco span:nth-child(2){width:87%}.eco span:nth-child(3){width:73%}.eco span:nth-child(4){width:59%;background:#d4e5da}.pyramid{display:flex;flex-direction:column;align-items:center;gap:4px;margin:15px 0}.pyramid div{background:#1c655f;color:white;text-align:center;padding:8px 6px;font-size:.78rem;max-width:100%}.pyramid div:nth-child(1){width:36%}.pyramid div:nth-child(2){width:54%;background:#357a71}.pyramid div:nth-child(3){width:74%;background:#63968b}.pyramid div:nth-child(4){width:96%;background:#a5c6b3;color:#123f3a}.mini-sub{font-size:.84rem;line-height:1.55;margin-top:12px}@media(max-width:740px){.model-grid{grid-template-columns:1fr 1fr}.model-grid.three{grid-template-columns:1fr}.model-grid>div:last-child:nth-child(odd){grid-column:1/-1}.photo-model{flex-direction:column}}
+
+/* Filtered portfolio sections */
+.portfolio-panel[hidden], #grid[hidden] {display:none!important}
+.portfolio-panel {padding-top:24px}
+.portfolio-panel .in {max-width:none;padding:0}
+.portfolio-panel .in.two {display:block}
+.portfolio-panel .grid {margin-top:18px}
+</style>
+</head>
+<body>
+<nav aria-label="Main" class="top"><div class="in"><b>Rachel Lawerh</b><div class="links"><a href="#about">About</a><a href="#work">Projects</a><a href="#publications">Publications</a><a data-show-filter="leadership" href="#work">Leadership</a><a href="#teaching">Teaching</a><a href="#funding">Grants</a><a href="#contact">Contact</a><a href="#beyond">Beyond work and classroom</a><a href="#expertise">Methods &amp; tools</a></div></div></nav>
+<header class="band" style="padding-bottom:0">
+<div class="in hero">
+<div>
+<h1>Rachel Lawerh</h1>
+<p class="role">Selected Evidence Portfolio</p>
+<p class="role">Public health · Social marketing · Program design · Research and evaluation</p>
+</div>
+<div>
+<div class="cta"><a class="btn" href="#about">About &amp; experience</a><a class="btn ghost" href="https://www.linkedin.com/in/rachel-lawerh">LinkedIn</a></div>
+</div>
+</div>
+</header>
+<section class="band" id="about" style="background:var(--panel)">
+<div class="in">
+<div>
+<h2>About</h2>
+<p>My work in Canada includes public health research, programme evaluation, population health surveillance, policy analysis and knowledge translation. At Haldimand-Norfolk Health Unit, I prepared epidemiological summaries, maintained public-facing surveillance reports and supported accountability reporting. At Peel Public Health, I developed approaches to help Family Health teams use population health data in programme planning and service delivery. This work drew on the Ontario Public Health Standards, with attention to population health assessment, health equity and evidence-informed decision-making.</p>
+<p>I also bring experience in health programme design, implementation and evaluation in Ghana and the Central African Republic. Since 2013, I have conducted qualitative and quantitative research, developed monitoring and evaluation frameworks, worked with government and community partners, and supported health promotion and social marketing programmes. My work involves developing research questions, selecting methods, collecting and analyzing data, and using findings to inform programmes, policy and practice.</p>
+<p>I hold a PhD in Population Health from the University of Ottawa, a Master of Public Health and a Bachelor of Science in Administration from the University of Ghana. I also teach health research methods at the University of Ottawa.</p>
+</div>
+</div>
+</section>
+<div aria-label="Career route" class="route band" style="padding-block:0">
+<div class="in">
+<p>Experience across public health, research, evaluation and social marketing · 2013–2026</p>
+<ol class="stops">
+<li class="key"><a href="#teaching"><span class="dot"></span><span class="yr">2026</span><span class="nm">University of Ottawa</span><span class="pl">Ottawa, ON · Canada</span></a></li>
+<li class="key"><a href="#p-peel"><span class="dot"></span><span class="yr">2024</span><span class="nm">Region of Peel Public Health</span><span class="pl">Mississauga, ON · Canada</span></a></li>
+<li class="key"><a href="#p-hn"><span class="dot"></span><span class="yr">2023</span><span class="nm">Haldimand-Norfolk</span><span class="pl">Simcoe, ON · Canada</span></a></li>
+<li class="key"><a href="#p-msf"><span class="dot"></span><span class="yr">2024–2025</span><span class="nm">Médecins Sans Frontières</span><span class="pl">Bangui, CAR</span></a></li>
+<li class="key"><a href="#p-usaid"><span class="dot"></span><span class="yr">2020–2022</span><span class="nm">TFHO · USAID</span><span class="pl">Accra, Ghana</span></a></li>
+<li class="key"><a href="#p-salon"><span class="dot"></span><span class="yr">2018–2020</span><span class="nm">TFHO · Programs</span><span class="pl">Accra, Ghana</span></a></li>
+<li><a href="#p-early"><span class="dot"></span><span class="yr">2017–2018</span><span class="nm">Population Services International</span><span class="pl">Ghana</span></a></li>
+<li><a href="#p-early"><span class="dot"></span><span class="yr">2013–2015</span><span class="nm">Ghana AIDS Commission / University of Ghana</span><span class="pl">Ghana</span></a></li>
+</ol>
+</div>
+</div>
+<section class="band" id="work">
+<div class="in">
+<h2>Selected projects</h2>
+<p class="lead" style="margin-bottom:16px">Explore the work, tools and decisions behind selected projects.</p>
+<div aria-label="Filter projects" class="filters" role="group">
+<button aria-pressed="true" data-f="all" id="f-all">All projects</button>
+<button aria-pressed="false" data-f="mel" id="f-mel">Monitoring and evaluation</button>
+<button aria-pressed="false" data-f="policy" id="f-policy">Policy and public health</button>
+<button aria-pressed="false" data-f="research" id="f-research">Research and global health</button>
+<button aria-pressed="false" data-f="kt" id="f-kt">Knowledge translation</button>
+<button aria-pressed="false" data-f="promo" id="f-promo">Health promotion</button><button aria-pressed="false" data-f="social" id="f-social">Social marketing &amp; behaviour change</button>
+<button aria-pressed="false" data-f="leadership" id="f-leadership">Leadership and stakeholder engagement</button><button aria-pressed="false" data-f="teaching" id="f-teaching">Teaching and capacity building</button><button aria-pressed="false" data-f="publications" id="f-publications">Publications and reports</button><button aria-pressed="false" data-f="funding" id="f-funding">Grant and proposal development</button><button aria-pressed="false" data-f="beyond" id="f-beyond">Beyond work and classroom</button></div>
+<div class="grid" id="grid"></div><section class="portfolio-panel" hidden="" id="funding"><div class="in"><h2>Grant and proposal development</h2><p class="lead">Contributions to programme design, technical narratives, monitoring frameworks and funding proposals—not grants held personally.</p><div class="grid"><article class="proj"><p class="where">Canada · 2025</p><h3>Trellis HIV &amp; Community Care</h3><p>Co-developed an Ontario HIV Treatment Network community-based project and participatory evaluation application for culturally responsive outreach and care with African, Caribbean and Black communities. </p></article><article class="proj"><p class="where">Ghana · 2020</p><h3>Institutional proposal development</h3><p>Proposal co-developer at Total Family Health Organisation for the five-year USAID Health Marketing Activity (US$5 million), USAID COVID-19 response (US$1 million) and PMI VectorLink subaward (US$55,000).</p></article></div></div></section><section class="portfolio-panel" hidden="" id="beyond"><div class="in"><h2>Beyond work and classroom</h2></div></section><section class="portfolio-panel" hidden="" id="publications" style="background:var(--panel)"><div class="in"><h2>Publications, reports and scholarly outputs</h2><p class="lead">Selected publications and reports appear within their related projects above. This consolidated list also includes work without a public link; unpublished and under-review items are labelled.</p><h3 class="sub">Peer-reviewed articles</h3><ul class="list"><li><b><a href="https://penn.manifoldapp.org/read/gender-and-wash-practices-in-schools/section/b7a5d324-0540-4467-bd11-b9b6e71f4f0a" rel="noopener" target="_blank">Thompson, J. A., &amp; Lawerh, R. (2024). Gender and WASH practices in schools: Photovoice research from Southwest Cameroon. The International Journal for Water Equity and Justice.</a></b></li><li><b><a href="https://pubmed.ncbi.nlm.nih.gov/35312470/" rel="noopener" target="_blank">Kalamar, A., Bixiones, C., Jaworski, G., Lerma, K., Mwansa, M., Lawerh, R., &amp; Adjei, S. (2022). Supporting contraceptive choice in self-care: Qualitative exploration of beliefs and attitudes towards emergency contraceptive pills and on-demand use in Accra, Ghana and Lusaka, Zambia. Sexual and Reproductive Health Matters, 29(3), 2045065.</a></b></li><li><b>Aziato, L., Hindin, M. J., Maya, E. T., Manu, A., Amuasi, S. A., Lawerh, R. M., &amp; Ankomah, A. (2016). Adolescents’ responses to an unintended pregnancy in Ghana: A qualitative study. Journal of Pediatric and Adolescent Gynecology, 29(6), 653–658.</b></li></ul><h3 class="sub">Manuscripts under review</h3><ul class="list"><li><b>Lawerh, R., Yomle, A., &amp; Foster, A. M. “Is she pure?”: HIV stigma and health care access among young women in Lower Manya Krobo, Ghana. BMC Health Services Research. </b></li><li><b>Lawerh, R., Yomle, A., &amp; Foster, A. M. Using photovoice to explore sexual and reproductive health experiences of young women living with HIV in Lower Manya Krobo, Ghana. American Journal of Public Health.</b></li><li><b>Lawerh, R., Yomle, A., &amp; Foster, A. M. “I don’t need a ‘How are you?’”: Food, family, and fertility pressure among young women living with HIV in Ghana. BMC Women’s Health.</b></li></ul><h3 class="sub">Research and evaluation reports</h3><ul class="list"><li><b><a href="https://evaluation.msf.org/evaluation-report/initiative-de-decentralisation-de-msf-bangui-rca-fren" rel="noopener" target="_blank">Gbomosa, C. N., Asong, R. T., Lawerh, R., &amp; Foster, A. M. (2025). Evaluation of MSF’s decentralization initiative in Bangui, Central African Republic: Improving the availability and accessibility of SRH and HIV services. Médecins Sans Frontières, Stockholm Evaluation Unit.</a></b></li><li><b>Lawerh, R., Abdulai, S., &amp; Duah, D. P. L. (2021). Knowledge, attitude and practices related to sexual and reproductive health and family planning in Northern, North East and Savannah Regions of Ghana. USAID Health Marketing Activity.</b></li><li><b>Duah, D. P. L., Lawerh, R., Balasubramanian, S., &amp; Adjei, S. (2021). Psychographic segmentation of male condom users and non-users in rural and urban Greater Accra Region, Ghana. USAID Health Marketing Activity.</b></li></ul><h3 class="sub">Additional technical reports and research outputs</h3><ul class="list"><li>Duah, D. P. L., Lawerh, R., &amp; Adjieteh, S. (2020). Pregnant Women’s Beliefs and Practices Concerning the Use of Insecticide Treated Net—Testing Intervention Prototypes. Total Family Health Organisation / President’s Malaria Initiative. Internal report.</li><li>Enuameh, N., Azure, S., Lawerh, R., &amp; Adjei, S. (2019). Concept Tests and Evaluation of Potential Impact of New Television and Radio Campaigns for Family Planning. Total Family Health Organisation. Internal report.</li><li>Lawerh, R., Asare, O., Oko-Oboh, A., &amp; Foster, A. M. (2022). Exploring the Availability and Accessibility of Emergency Contraceptives in Ghana: A Mystery Client Study in Two Urban Areas. Research manuscript; publication status to verify.</li><li>Lawerh, R., &amp; Enos, J. (2019). Perceptions about Marriage of People Living with Physical Disability in the Lower Manya Krobo Municipality. Conference poster, Noguchi Memorial Institute for Medical Research 40th anniversary conference.</li></ul></div></section><section class="portfolio-panel" hidden="" id="teaching">
+<div class="in two">
+<div>
+<h2>Teaching and capacity building</h2>
+<p class="quote">Teaching research methods through applied questions, structured feedback and collaborative learning.</p>
+<p>Part-Time Professor at the University of Ottawa, teaching Health Research: Quantitative and Qualitative Approaches and guiding students from a research question to a complete research proposal. Earlier, a Research and Teaching Assistant in international health, quantitative methods and the determinants of health, leading statistics labs.</p>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section class="band" id="expertise"><div class="in"><h2>Methods and tools</h2><div>
+<h3 class="sub">Research design and data collection</h3>
+<div class="chips"><span>Quantitative research</span><span>Qualitative research</span><span>Mixed-methods research</span><span>Cross-sectional surveys</span><span>Focus group discussions (FGDs)</span><span>In-depth interviews (IDIs)</span><span>Key informant interviews (KIIs)</span><span>Client exit interviews</span><span>Photovoice and participatory research</span><span>Sampling and questionnaire design</span><span>KoboToolbox and mobile data collection</span></div>
+<h3 class="sub">Analysis, evaluation and application</h3>
+<div class="chips"><span>Descriptive and inferential statistics</span><span>Logistic regression</span><span>Thematic analysis</span><span>Triangulation</span><span>Psychographic segmentation</span><span>Formative research</span><span>Programme evaluation</span><span>RE-AIM</span><span>OECD-DAC evaluation criteria</span><span>Logic models and theories of change</span><span>Results frameworks and indicators</span><span>Knowledge translation</span><span>Surveillance and epidemiological reporting</span><span>Jurisdictional scans</span><span>Research ethics</span></div>
+<h3 class="sub">Tools</h3>
+<div class="chips"><span>Power BI</span><span>Tableau</span><span>Stata</span><span>SPSS</span><span>NVivo</span><span>KoboToolbox</span><span>ODK</span><span>DHIS2</span><span>iPHIS</span><span>Microsoft 365 and SharePoint</span></div>
+</div></div></section>
+<footer class="band" id="contact">
+<div class="in two">
+<div><h2>Let's talk</h2><p>Open to roles and assignments in monitoring and evaluation, public health research, policy and global health.</p></div>
+<div><p>Email: <a href="mailto:rblawerh@gmail.com">rblawerh@gmail.com</a></p><p><a href="https://www.linkedin.com/in/rachel-lawerh">linkedin.com/in/rachel-lawerh</a></p><p class="small">Canada · Available for research, evaluation and public health opportunities.</p></div>
+</div>
+</footer>
+
+<script>
+{
+const P=[
+{id:'peel',f:['kt','mel','policy'],where:'Region of Peel Public Health, Family Health · Mississauga, Ontario · 2024',t:'Turning population health data into everyday practice',s:'A knowledge translation strategy with training, feedback mechanisms and an evaluation plan.',q:'How could Family Health staff find, interpret and use population health data with more confidence in their planning?',d:['Developed a division-wide knowledge translation strategy for approximately 155 Family Health staff.','Delivered interactive knowledge translation training, including the division\'s first data orientation for new staff.','Designed the evaluation plan for the strategy, using a logic model and indicators to measure its impact.','Produced evidence briefs and quarterly data summaries that informed leadership\'s program and policy decisions.','Prepared evidence briefs and quarterly data summaries for programme and policy decisions.'],m:'Knowledge translation planning, theory of change, logic models, indicator development, programme evaluation, game-based training and equity-focused data interpretation.',o:'Knowledge translation materials, staff orientation, a Family Health Data Snapshot and an evaluation approach for monitoring uptake.'},
+{id:'hn',f:['policy','mel'],where:'Haldimand-Norfolk Health Unit · Simcoe, Ontario · 2023',t:'Respiratory illness surveillance and reporting',s:'An environmental scan that informed a decision to broaden public respiratory illness reporting, followed by a Power BI dashboard prototype.',q:'How could public reporting move beyond COVID-19 to give residents a fuller picture of respiratory illness?',d:['Led an environmental scan of respiratory illness reporting in other Ontario public health units that informed the expansion of Haldimand-Norfolk Health Unit\'s COVID-19 dashboard to include other respiratory illnesses, and developed a revised Power BI dashboard prototype.','Updated the public COVID-19 dashboard and outbreak web pages each week and prepared data for bi-weekly media releases.','Prepared recurring epidemiological summaries and surveillance reporting to inform public health managers and leadership.','Co-drafted the health unit\'s annual accountability report to the Ministry of Health on the Ontario Public Health Standards.'],m:'Jurisdictional scan, surveillance data analysis, indicator selection, forecasting, Power BI.',o:'The reporting work supported timely public access to respiratory illness information and informed a proposed expansion of the public dashboard; '},
+{id:'naf',f:['mel','promo'],where:'NAF Canada · 2022–2024',t:'Evaluating culturally responsive reproductive health education',s:'A RE-AIM evaluation design linking training reach, learning, implementation and sustained practice.',q:'Who participated, what did they learn, and how might training influence practice?',d:['Contributed to evaluation planning for webinars and conferences, including RE-AIM evaluation questions and indicators.','Specified pre-training, post-training and longitudinal survey options, participant and stakeholder interviews, and document review.','Designed an analysis approach combining descriptive statistics, cross-tabulations, paired pre/post comparisons and thematic analysis.'],m:'RE-AIM; programme logic model; process and outcome evaluation; pre/post/longitudinal design; purposive interviews; descriptive statistics; cross-tabulations; paired t-tests; inductive and deductive thematic analysis.',o:'An evaluation plan to guide implementation, learning and funder accountability; planned measures are not presented as completed results.'},
+{id:'digital',f:['mel','promo'],where:'Region of Peel Public Health · Mississauga, Ontario · 2023–2024',t:'Digital campaign evaluation · Family Health',s:'Evaluated a November–December 2023 paid digital campaign promoting Peel Family Health webpages and services to parents and caregivers.',q:'How effectively did Google, Facebook and Instagram advertising increase awareness and use of Family Health resources?',d:['Developed a theory of change and logic model linking campaign resources, content development and advertising to website and contact-centre use.','Applied RE-AIM to define evaluation questions and data sources for reach, effectiveness, adoption, implementation and maintenance.','Planned analysis using website and social media analytics, Multi-Channel Contact Centre call volumes, campaign delivery records and staff feedback.'],m:'Logic model; theory of change; RE-AIM; website and social media analytics; implementation monitoring; evaluation planning.',o:'An evaluation framework and briefing analysis to guide improvements to digital outreach and service access.'},
+{id:'msf',f:['mel','research'],where:'Médecins Sans Frontières · Bangui, Central African Republic · 2024–2025',t:'An independent evaluation of decentralized HIV and reproductive health services',s:'Team evaluation of how well MSF\'s decentralized services worked, published with recommendations for MSF and the Ministry of Health.',q:'How relevant, effective, efficient and sustainable were MSF\'s decentralized services in Bangui?',d:['Co-conducted an independent mixed-methods evaluation assessing implementation, relevance, effectiveness, efficiency, impact and sustainability.','Designed and analyzed a client exit survey and follow-up interviews on access, quality of care and satisfaction.','Synthesized evidence and literature to frame findings and recommendations.','Co-authored the published report, with policy recommendations to MSF and the Ministry of Health.'],m:'Mixed-methods evaluation, OECD-DAC evaluation criteria, quantitative client exit survey (n=134), qualitative in-depth client interviews (n=12), evidence synthesis and triangulation.',o:'A published evaluation report for the MSF Stockholm Evaluation Unit. Conducted as part of a four-person team.',link:'https://evaluation.msf.org/evaluation-report/initiative-de-decentralisation-de-msf-bangui-rca-fren',linkText:'Read published evaluation'},
+{id:'phd',f:['research'],where:'University of Ottawa, doctoral research · Ghana · 2021–2026',t:'What shapes reproductive health for young women living with HIV',s:'A community-based photovoice study with young women aged 15 to 24 and the health system and community leaders around them.',q:'How do stigma, gender, poverty and the health system shape young women\'s sexual and reproductive health and HIV care?',d:['Designed and led a community-based photovoice study, working with the Municipal Health Directorate, hospital staff and community leaders to shape recruitment and study conduct.','Secured research ethics approval in Canada and Ghana for work with minors and people living with HIV, meeting TCPS 2 requirements for parental consent and youth assent.','Recruited and trained a peer research assistant with lived experience of HIV.','Led knowledge mobilization through community exhibitions designed to protect participants\' HIV status, and through international conference presentations.'],m:'Participatory photovoice, qualitative in-depth interviews, key informant interviews, thematic analysis, stakeholder engagement and research ethics.',o:'Findings show that poverty, food insecurity, stigma, gendered power and pronatalist expectations shape care, while youth clinic days, peer counsellors and multi-month dispensing help. Three manuscripts are under review.'},
+{id:'policyghana',f:['policy','promo','social'],where:'Total Family Health Organisation · Ghana',t:'Adolescent health policy and service access',s:'Using policy analysis to connect school health education and digital information access.',q:'How can young people access reliable health information within school policy constraints?',d:['Examined policy and institutional barriers to school-based reproductive health information.','Worked through Ghana Education Service and Ghana Health Service partnerships to develop alternative information channels.'],m:'Policy analysis, stakeholder engagement, intersectoral collaboration, implementation planning.',o:'School health educator engagement and planning to improve adolescent access through digital health services.'},
+{id:'usaid',f:['mel','research','promo','social'],where:'Total Family Health Organisation, USAID Health Marketing Activity · Ghana · 2020–2022',t:'Building the evidence and monitoring system for a five-year USAID program',s:'Proposal design, a five-year monitoring, evaluation and learning plan, and the formative research that shaped social marketing and behaviour change strategies.',q:'What evidence and monitoring would a multi-year health marketing program need to design its work and show results to its donor?',d:['Contributed to funding proposals and monitoring plans for: a multi-million-dollar, five-year USAID Health Marketing Activity, a US$1 million USAID COVID-19 response and a US$55,000 PMI VectorLink malaria prevention subaward.','Contributed to TFHO\'s first Strategic Research Plan and the development of a five-year monitoring, evaluation and learning plan for the USAID Health Marketing Activity.','Led formative research, consumer and market studies, psychographic segmentation, concept testing and product positioning for socially marketed health products, including Ebony and Secure condoms, Aquatabs, SATO sanitation products and malaria-prevention commodities.','Managed the Year One work plan for the USAID Health Marketing Activity and contributed to quarterly donor reports on program implementation, indicator performance and progress against targets.','Developed and published M&E Bites, an internal knowledge-sharing series to strengthen staff understanding of monitoring and evaluation concepts and practices.'],m:'Quantitative and qualitative formative research, focus group discussions (FGDs), in-depth interviews (IDIs), psychographic segmentation, logic models, results frameworks, indicator reference sheets and donor reporting.',o:'An institutional programme supported by a monitoring framework and formative research reports on sexual and reproductive health knowledge and condom use that informed program strategy.'},
+{id:'salon',f:['promo','mel','social'],where:'Total Family Health Organisation · Ghana · 2018–2020',t:'Reaching women through hair salons',s:'A family planning initiative using hair salons as community sites for counselling and referrals.',q:'How could hair salons become a trusted route to reproductive health information and services?',d:['Supported implementation and monitoring of a salon-based family planning initiative in Ghana, including health worker training on referral records and mobile data collection.','Midwives counselled women in salons and referred them to health facilities.','Trained health workers on data booklets, referral coupons and mobile data collection.'],m:'Community co-design, Health Impact Pyramid, referral tracking, mobile data collection.',o:'Salon-based counselling and referral processes supported by health worker training and monitoring tools.'},
+{id:'early',f:['research','mel'],where:'Ghana · 2013–2018',t:'Field research, data quality and programme learning',s:'Research and field coordination with the Ghana AIDS Commission, University of Ghana and Population Services International.',q:'How could field research generate reliable evidence for health programmes?',d:['Supervised qualitative fieldwork, interviews and focus groups for Ghana AIDS Commission and University of Ghana School of Public Health research (2013–2015), including transcription review and data quality.','Supported research, desk reviews, data quality assessments, field logistics and departmental reporting at Population Services International Ghana (2017–2018).'],m:'Qualitative field supervision; focus group discussions; in-depth interviews; research operations; data quality assurance; desk reviews.',o:'Field research and programme evidence supported by coordinated data collection, quality checks and reporting.'},
+{id:'dis',f:['research'],where:'University of Ghana, MPH research · Lower Manya Krobo · 2019',t:'Community perceptions of marriage for people living with physical disabilities',s:'A mixed-methods study of how communities view marriage for persons with physical disabilities, and why.',q:'What shapes community perceptions about marriage for people living with physical disabilities?',d:['Led a mixed-methods study on perceptions of marriage among people living with physical disabilities in Ghana, combining community surveys, in-depth interviews with persons with disabilities, logistic regression and thematic analysis.','Designed a stratified community sample across rural and urban localities.'],m:'Cross-sectional survey, stratified random sampling, logistic regression, in-depth interviews, thematic analysis.',o:'A majority of respondents held unfavourable views, associated with younger age, lower education and beliefs about the cause of disability.'}
+];
+const V={
+"peel":`<div class="project-visual"><div class="micro-label">Family Health · knowledge translation logic model</div><div class="model-grid"><div><b>Need</b><span>Accessible, usable population health data for ~155 staff</span></div><div><b>Inputs</b><span>Population health indicators · staff expertise · data tools</span></div><div><b>Activities</b><span>Meet the Patels orientation · 333 Data Challenge · Data Snapshot</span></div><div><b>Outputs</b><span>Learning sessions · practical data products · feedback survey</span></div><div><b>Change sought</b><span>Data literacy → interpretation → evidence-informed programme planning</span></div></div><div class="mini-sub"><strong>Evaluation in practice</strong> The data-orientation feedback instrument assessed content, delivery, usefulness and improvement opportunities using rating scales and open-ended questions.</div></div>`,
+"hn":`<div class="project-visual"><div class="micro-label">Respiratory illness surveillance and reporting</div><div class="model-grid"><div><b>Collect</b><span>Case and outbreak records · vaccination logs · PHO respiratory indicators</span></div><div><b>Validate</b><span>Data cleaning · consistency checks · denominator review</span></div><div><b>Analyze</b><span>Trends · vaccination coverage · outbreaks · weekly epidemiological summaries</span></div><div><b>Report</b><span>Leadership briefs · biweekly media statistics · public-facing web updates</span></div><div><b>Public purpose</b><span>Timely respiratory illness information for residents and public health decisions</span></div></div><div class="mini-sub"><strong>Reporting redesign</strong> Jurisdictional scan of Ontario health units → proposed respiratory indicators → Power BI prototype. </div></div>`,
+"naf":`<div class="project-visual"><div class="micro-label">Professional education evaluation · RE-AIM</div><div class="reaim"><div>Reach</div><div>Effectiveness</div><div>Adoption</div><div>Implementation</div><div>Maintenance</div></div><div class="model-grid three"><div><b>Pre</b><span>Participant characteristics · knowledge and attitudes</span></div><div><b>Post</b><span>Learning and satisfaction · paired comparisons</span></div><div><b>Follow-up</b><span>Application to practice · retention · interviews</span></div></div><div class="mini-sub">Evaluation design: questionnaires, document review, interviews, cross-tabulation, paired tests and thematic analysis.</div></div>`,
+"msf":`<div class="project-visual"><div class="micro-label">Bangui · independent mixed-methods evaluation</div><div class="reaim"><div>Relevance</div><div>Effectiveness</div><div>Efficiency</div><div>Sustainability</div><div>Scalability</div></div><div class="model-grid three"><div><b>Survey</b><span>134 client exit surveys · KoboToolbox instrument</span></div><div><b>Interviews</b><span>12 client interviews · thematic evidence</span></div><div><b>Integration</b><span>Triangulation with wider team findings → recommendations</span></div></div><div class="mini-sub">Client-facing instruments, survey and interview analysis, and report co-authorship within a four-person evaluation team. <a href="https://evaluation.msf.org/evaluation-report/initiative-de-decentralisation-de-msf-bangui-rca-fren" target="_blank" rel="noopener">Read the report ↗</a></div></div>`,
+"phd":`<div class="project-visual"><div class="micro-label">Photovoice · social ecological perspective</div><div class="photo-model"><div class="camera">📷</div><div class="eco"><span>Policy and health systems</span><span>Community · stigma and norms</span><span>Family · relationships and support</span><span>Individual · lived experience</span></div></div><div class="mini-sub">21 young women and 15 community/health-system stakeholders · photovoice, IDIs and KIIs · thematic analysis · community exhibition. </div></div>`,
+"usaid":`<div class="project-visual"><div class="micro-label">Social and behaviour change · research to programme design</div><div class="model-grid"><div><b>Discover</b><span>KAP · FGDs · IDIs · psychographic segmentation</span></div><div><b>Design</b><span>Audience segments · brand positioning · behaviour change messages</span></div><div><b>Deliver</b><span>Ebony and Secure condoms · DMPA-SC self-injection · Aquatabs water treatment · SATO sanitation products · chlorhexidine cord care · insecticide-treated nets</span></div><div><b>Learn</b><span>Marketing research · monitoring plans · feedback for adaptation</span></div></div><div class="mini-sub"><a href="https://www.instagram.com/ebonycondoms/?hl=en" target="_blank" rel="noopener">Ebony ↗</a> · <a href="https://sato.lixil.com/community-relationships-matter-when-it-comes-to-product-adoption/" target="_blank" rel="noopener">SATO research story ↗</a> · Secure Girls Talk within social and behaviour change work.</div></div>`,
+"salon":`<div class="project-visual"><div class="micro-label">Health promotion · Health Impact Pyramid</div><div class="pyramid"><div>Individual counselling</div><div>Community-based service access</div><div>Supportive settings and referral pathways</div><div>Wider social and structural conditions</div></div><div class="mini-sub">30 salons as community entry points → information and counselling → referral pathways → monitoring. The pyramid places this intervention in a wider health promotion context.</div></div>`,
+"policyghana":`<div class="project-visual"><div class="micro-label">Policy analysis · partnership and implementation pathway</div><div class="model-grid"><div><b>Policy barrier</b><span>Limits on reproductive health information in senior high schools</span></div><div><b>Policy response</b><span>Collaboration with Ghana Education Service · school health educators</span></div><div><b>Access pathway</b><span>Ghana Health Service adolescent health partnership · digital health information</span></div><div><b>Purpose</b><span>More accessible, appropriate information for school-going adolescents</span></div></div><div class="mini-sub">Policy and stakeholder analysis linked institutional constraints to practical delivery channels.</div></div>`,
+"digital":`<div class="project-visual"><div class="micro-label">Digital campaign · programme logic model</div><div class="model-grid"><div><b>Inputs</b><span>Communications and MCC teams · budget</span></div><div><b>Activities</b><span>Content development · paid ads on Google, Facebook and Instagram</span></div><div><b>Outputs</b><span>Digital materials produced and shared</span></div><div><b>Outcomes sought</b><span>Greater use of Family Health webpages and MCC resources</span></div><div><b>Evaluation</b><span>Web analytics · social analytics · MCC call volumes · delivery records</span></div></div><div class="micro-label">RE-AIM evaluation framework</div><div class="reaim"><div>Reach</div><div>Effectiveness</div><div>Adoption</div><div>Implementation</div><div>Maintenance</div></div></div>`,
+"dis":`<div class="project-visual"><div class="micro-label">Mixed-methods research</div><div class="model-grid three"><div><b>Survey</b><span>Stratified sampling · logistic regression</span></div><div><b>Interviews</b><span>IDIs · thematic analysis</span></div><div><b>Integration</b><span>Patterns + lived experience</span></div></div></div>`
+};
+const L={mel:'Monitoring and evaluation',policy:'Policy and public health',research:'Research and global health',kt:'Knowledge translation',promo:'Health promotion',social:'Social marketing & behaviour change'};
+const g=document.getElementById('grid');
+g.innerHTML=P.map(p=>`<article class="proj" id="p-${p.id}" data-f="${p.f.join(' ')}"><p class="where">${p.where}</p><h3>${p.t}</h3><p class="sum">${p.s}</p>${V[p.id]||''}<div class="tags">${p.f.map(x=>`<span>${L[x]}</span>`).join('')}</div><details><summary>The question, the work and what it informed</summary><h4>The question</h4><p>${p.q}</p><h4>Activities and approach</h4><p>${p.d.join(' ')}</p><h4>Methods and tools</h4><p>${p.m}</p><h4>Use of findings</h4><p>${p.o}</p>${p.link?`<p style="margin-top:12px"><a href="${p.link}" target="_blank" rel="noopener">${p.linkText||'View public source'} ↗</a></p>`:''}</details></article>`).join('');
+
+const leadershipItems = [["Division-wide knowledge translation · Region of Peel, Canada", "Designed and delivered interactive data-literacy and knowledge translation activities for Family Health, including orientation and practical exercises for a division of approximately 155 staff."], ["Regional outbreak surveillance team · Haldimand-Norfolk Health Unit, Canada", "Represented Haldimand-Norfolk Health Unit in a regional outbreak team with Niagara, Hamilton and provincial partners, consolidating outbreak reporting and wastewater surveillance data to support information sharing and regional coordination."], ["Research field teams · Ghana", "Recruited, trained, mentored and supervised 84 data collectors across research projects."], ["M&E Bites · TFHO, Ghana", "Developed an internal learning series to strengthen staff understanding and application of monitoring and evaluation."], ["School health coordinators · Ghana Education Service", "Supported training for 70 regional and district School Health Education Programme coordinators on adolescent health."], ["National adolescent health technical working group · Ghana", "Represented TFHO in national technical working group discussions reviewing adolescent health teaching and learning materials and recommending evidence-informed improvements."], ["MPH internship partnership · University of Ghana", "Supported MPH internship activities through an institutional partnership."]];
+const leadershipCard = `<article class="proj" id="p-leadership" data-f="leadership"><p class="where">Canada and Ghana · Public health and programme leadership</p><h3>Leadership and stakeholder engagement</h3><p class="sum">Staff development, research-team management and institutional partnerships.</p><ul class="list">${leadershipItems.map(([heading,detail])=>`<li><b>${heading}</b><span>${detail}</span></li>`).join('')}</ul></article>`;
+g.insertAdjacentHTML('beforeend', leadershipCard);
+
+const bs=document.querySelectorAll('.filters button');
+const panels=['teaching','publications','funding','beyond'];
+bs.forEach(b=>b.addEventListener('click',()=>{
+ const f=b.dataset.f;
+ bs.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+ g.hidden=panels.includes(f);
+ panels.forEach(id=>{document.getElementById(id).hidden=(id!==f)});
+ g.querySelectorAll('.proj').forEach(c=>{c.hidden=!(f==='all'||c.dataset.f.split(' ').includes(f))});
+}));
+// Navigation links open the corresponding portfolio category.
+document.querySelectorAll('a[href="#teaching"],a[href="#publications"],a[href="#funding"],a[href="#beyond"]').forEach(a=>a.addEventListener('click',()=>{
+ const id=a.getAttribute('href').slice(1);
+ document.getElementById('f-'+id).click();
+ document.getElementById('work').scrollIntoView({behavior:'smooth'});
+}));
+document.querySelectorAll('[data-show-filter]').forEach(a=>a.addEventListener('click',()=>document.getElementById('f-'+a.dataset.showFilter).click()));
+document.querySelectorAll('.stops a').forEach(a=>a.addEventListener('click',()=>{const t=document.querySelector(a.getAttribute('href'));if(t&&t.classList.contains('proj')){document.getElementById('f-all').click();const d=t.querySelector('details');if(d)d.open=true;}}));
+}
+</script>
+</body>
+</html>
